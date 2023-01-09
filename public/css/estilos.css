@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 html,
 body,
 #app {
     height: 100%;
-    font-family: "Roboto";
+    font-family: "Lato","Roboto", sans-serif;
 }
 
 #app {
@@ -26,6 +26,7 @@ body,
 }
 .navbar-ddown {
     background: white;
+    /* max-width: 1200px; */
 }
 .navbar-brand {
     color: #d91e1c;
@@ -40,6 +41,10 @@ body,
 
 main {
     background-color: beige;
+}
+
+.navbar-collapse {
+    flex-grow: initial;
 }
 
 .cr-title {
