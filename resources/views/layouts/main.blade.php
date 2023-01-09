@@ -22,7 +22,7 @@ Este archivo funciona como nuestro template de base
     <div id="app">
 
         <nav class="navbar navbar-expand-lg navbar-base">
-            <div class="container-fluid navbar-ddown">
+            <div class="container navbar-ddown">
                 <a class="navbar-brand" href="{{url('/')}}">Cruz Roja</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +31,28 @@ Este archivo funciona como nuestro template de base
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{url('/')}}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('cursos')}}">Cursos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('blog')}}">Blog</a>
+                            <a class="nav-link" aria-current="page" href="{{url('/')}}">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cursos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" aria-current="page"
+                                        href="{{url('cursos')}}">Particulares</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" aria-current="page" href="{{url('cursos')}}">In-company</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('blog')}}">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
