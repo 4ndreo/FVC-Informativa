@@ -19,94 +19,101 @@ Este archivo funciona como nuestro template de base
 </head>
 
 <body>
-    <div id="app">
-
-        <nav class="navbar navbar-expand-lg navbar-base">
+    <div id="app" class="flex-wrapper">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-base">
             <div class="container navbar-ddown">
                 <a class="navbar-brand" href="{{url('/')}}">Cruz Roja</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{url('/')}}">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Cursos
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" aria-current="page"
-                                        href="{{url('cursos')}}">Particulares</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" aria-current="page" href="{{url('cursos')}}">In-company</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('blog')}}">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
-                        </li>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navegación</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{{url('/')}}">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Cursos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" aria-current="page"
+                                            href="{{url('cursos')}}">Particulares</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" aria-current="page"
+                                            href="{{url('cursos')}}">In-company</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url('blog')}}">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
+                            </li>
+                            {{-- Si usuario autenticado --}}
+                            @if(Auth::user())
+                            {{-- Si usuario Admin --}}
+                            @if(Auth::user()->esAdmin())
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Panel
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" aria-current="page"
+                                            href="{{url('admin/cursos')}}">Administrar Cursos</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" aria-current="page"
+                                            href="{{url('admin/novedades')}}">Administrar Blog</a>
+                                    </li>
 
-                        {{-- Si usuario autenticado --}}
-                        @if(Auth::user())
-                        {{-- Si usuario Admin --}}
-                        @if(Auth::user()->esAdmin())
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Panel
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" aria-current="page"
-                                        href="{{url('admin/cursos')}}">Administrar Cursos</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" aria-current="page"
-                                        href="{{url('admin/novedades')}}">Administrar Blog</a>
-                                </li>
-
-                                <li>
-                                    <a class="dropdown-item" aria-current="page"
-                                        href="{{url('admin/usuarios')}}">Administrar Usuarios</a>
-                                </li>
-                            </ul>
-                        </li>
-                        @endif
-                        {{-- Fin usuario admin --}}
-                        <li class="nav-item">
-                            <form action="{{route('auth.logout')}}" method="post">
-                                @csrf
-                                <button type="submit" class="btn nav-link">Cerrar Sesion</button>
-                            </form>
-                        </li>
-                        @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('registrar.usuario') }}">Registrarse</a>
-                        </li>
-                        @endif
-                        {{-- Fin usuario autenticado --}}
-
-                    </ul>
+                                    <li>
+                                        <a class="dropdown-item" aria-current="page"
+                                            href="{{url('admin/usuarios')}}">Administrar Usuarios</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            @endif
+                            {{-- Fin usuario admin --}}
+                            <li class="nav-item">
+                                <form action="{{route('auth.logout')}}" method="post">
+                                    @csrf
+                                    <button type="submit" class="btn nav-link">Cerrar Sesion</button>
+                                </form>
+                            </li>
+                            @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('registrar.usuario') }}">Registrarse</a>
+                            </li>
+                            @endif
+                            {{-- Fin usuario autenticado --}}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <main class="container-fluid">
+       
+
+        <main class="">
 
             @if (Session::has('status.message'))
             <div class="alert alert-{{Session::get('status.type') ?? 'info'}}">{!!Session::get('status.message')!!}

@@ -13,9 +13,34 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
 @section('title', 'Pagina Principal')
 
 @section('main')
-<section class="container">
-
-    <section class="d-flex cont-1">
+<section class="">
+    <div id="homeCarousel" class="home-carousel carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <div class="d-flex cont-1">
         <div>
             <h1 class="cr-title">Cruz Roja Argentina</h1>
         </div>
@@ -29,7 +54,7 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
                 Capacitamos en Primeros Auxilios a más de 50.000 personas por año en el país y brindamos cobertura a los
                 asistentes en eventos masivos.</p>
         </div>
-    </section>
+    </div>
 
     <h2 class="negrita">Nuestros valores</h2>
     <section class="cont-valores">

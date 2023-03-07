@@ -7,10 +7,16 @@ body,
     font-family: "Roboto";
 }
 
-#app {
+/* #app {
     display: grid;
     grid-template-rows: 56px 1fr 75px;
-}
+} */
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  
+  }
 
 .negrita {
     font-weight: 700;
@@ -21,8 +27,8 @@ body,
 }
 
 .navbar-base {
-    color: white;
-    z-index: 10;
+    background-color: white;
+    height: 70px;
 }
 .navbar-ddown {
     background: white;
@@ -39,7 +45,18 @@ body,
 }
 
 main {
-    background-color: beige;
+    margin-top: 70px;
+}
+
+.home-carousel {
+    width: 100%;
+}
+
+.home-carousel .carousel-inner .carousel-item img
+{
+    height: 400px;
+object-fit: cover;
+
 }
 
 .cr-title {
