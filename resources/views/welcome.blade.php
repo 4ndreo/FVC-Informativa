@@ -10,51 +10,62 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
 
 @extends('layouts.main') {{-- Esto navega a [resources/views/layouts/main.blade.php] --}}
 
-@section('title', 'Pagina Principal')
+@section('title', 'Cruz Roja - Villa Crespo')
 
 @section('main')
 <section class="">
+    <div class="hero d-flex">
+        <div class="hero-text-cont d-flex flex-column container">
+            <div class="hero-text w-50">
+                <h1 class="cr-title">Cruz Roja Argentina</h1>
+
+                <p>Somos una asociación civil, humanitaria y de carácter voluntario, con presencia en el territorio
+                    argentino, y parte integrante del Movimiento Internacional de la Cruz Roja y de la Media Luna Roja,
+                    la
+                    red
+                    humanitaria más grande del
+                    mundo presente en 191 países. Capacitamos en Primeros Auxilios a más de 50.000 personas por año en
+                    el
+                    país y
+                    brindamos cobertura a los
+                    asistentes en eventos masivos.</p>
+            </div>
+        </div>
+        <div class="hero-image-cont w-50 ">
+            <div class="hero-overlay"></div>
+            <div class="hero-image"></div>
+        </div>
+
+    </div>
+
     <div id="homeCarousel" class="home-carousel carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100" alt="...">
-          </div>
+            <div class="carousel-item active">
+                <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100" alt="...">
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    <div class="d-flex cont-1">
-        <div>
-            <h1 class="cr-title">Cruz Roja Argentina</h1>
-        </div>
-        <div>
-            <p>Somos una asociación civil, humanitaria y de carácter voluntario, con presencia en el territorio
-                argentino, y
-                parte integrante del
-                Movimiento Internacional de la Cruz Roja y de la Media Luna Roja, la red humanitaria más grande del
-                mundo
-                presente en 191 países.
-                Capacitamos en Primeros Auxilios a más de 50.000 personas por año en el país y brindamos cobertura a los
-                asistentes en eventos masivos.</p>
-        </div>
     </div>
+
 
     <h2 class="negrita">Nuestros valores</h2>
     <section class="cont-valores">
@@ -128,4 +139,4 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         <a href="{{url('cursos')}}" class="btn btn-ver-cursos">Ver cursos</a>
     </section>
 </section>
-    @endsection
+@endsection

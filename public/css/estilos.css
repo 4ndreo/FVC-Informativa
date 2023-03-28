@@ -48,41 +48,61 @@ main {
     margin-top: 70px;
 }
 
+
+.hero {
+    max-height: 650px;
+    position: relative;
+    height: 650px;
+}
+.hero-text-cont {
+
+    justify-content: center;
+}
+.hero-text {
+    text-align: start;
+}
+.hero-image-cont {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%);
+    
+}
+.hero-overlay {
+    position: absolute;
+    background-color: rgba(255,0,0,0.3);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.hero-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:  url(../img/hero-imagen.JPG) no-repeat center center;
+    background-size: cover;
+}
+.cr-title {
+    background: url(../img/cruz-roja.png) no-repeat top center;
+    background-size: 50px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
 .home-carousel {
     width: 100%;
 }
 
 .home-carousel .carousel-inner .carousel-item img
 {
-    height: 400px;
+    height: 500px;
 object-fit: cover;
 
 }
 
-.cr-title {
-    background: url(../img/cruz-roja.png) no-repeat top center;
-    background-size: 50px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    margin-top: 5rem;
-}
 
-.cont-1 {
-    gap: 2%;
-    height: 300px;
-}
-
-.cont-1 > div {
-    width: 48%;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-}
-
-.cont-1 > div:last-child {
-    background: #d91e1c;
-    color: white;
-}
 
 .catalogo-cursos {
     display: grid;
