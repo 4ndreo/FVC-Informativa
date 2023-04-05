@@ -1,30 +1,85 @@
+/* 
+|-------------------------------------------
+|   Globals
+|-------------------------------------------
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+html {
+    scroll-behavior: smooth ;
+}
 
 html,
 body,
 #app {
     height: 100%;
-    font-family: "Roboto";
+    font-family: "Lato", "Roboto", sans-serif;
 }
 
-/* #app {
-    display: grid;
-    grid-template-rows: 56px 1fr 75px;
-} */
 .flex-wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  
-  }
+}
 
 .negrita {
     font-weight: 700;
 }
 
+.btn {
+    background-color: rgba(237, 28, 46, 1);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    width: fit-content;
+    border-radius: 0;
+    border: 0;
+    box-shadow:
+  0px 1.4px 2.2px rgba(204, 28, 43, 0.048),
+  0px 3.5px 5.3px rgba(204, 28, 43, 0.069),
+  0px 6.5px 10px rgba(204, 28, 43, 0.085),
+  0px 11.6px 17.9px rgba(204, 28, 43, 0.101),
+  0px 21.7px 33.4px rgba(204, 28, 43, 0.122)
+  /* , */
+  /* 0px 52px 80px rgba(204, 28, 43, 0.17) */
+;
+transition: all ease 0.3s;
+/* box-shadow:
+  0px 1.4px 2.2px -18px rgba(237, 28, 46, 0.048),
+  0px 3.5px 5.3px -18px rgba(237, 28, 46, 0.069),
+  0px 6.5px 10px -18px rgba(237, 28, 46, 0.085),
+  0px 11.6px 17.9px -18px rgba(237, 28, 46, 0.101),
+  0px 21.7px 33.4px -18px rgba(237, 28, 46, 0.122),
+  0px 52px 80px -18px rgba(237, 28, 46, 0.17)
+; */
+}
+.btn:hover {
+    background-color: rgb(204, 28, 43);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    width: fit-content;
+    border-radius: 0;
+    transform: scale(90%);
+    border: 0;
+    box-shadow: none;
+}
+
 .contain {
     object-fit: contain !important;
 }
+
+main {
+    margin-top: 70px;
+}
+
+/* 
+|-------------------------------------------
+|   Header
+|-------------------------------------------
+*/
 
 .navbar-base {
     background-color: white;
@@ -44,18 +99,25 @@ body,
     color: #d91e1c;
 }
 
-main {
-    margin-top: 70px;
-}
-
+/* 
+|-------------------------------------------
+|   Hero
+|-------------------------------------------
+*/
 
 .hero {
     max-height: 650px;
     position: relative;
     height: 650px;
 }
+.cr-title {
+    background: url(../img/cr_logo_rojo_horizontal_exp.svg) no-repeat top center;
+    background-size: contain;
+    padding-top: 8rem;
+    font-size: 0;
+    text-align: center;
+}
 .hero-text-cont {
-
     justify-content: center;
 }
 .hero-text {
@@ -68,11 +130,10 @@ main {
     right: 0;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%);
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0 100%);
-    
 }
 .hero-overlay {
     position: absolute;
-    background-color: rgba(255,0,0,0.3);
+    background-color: rgba(255, 0, 0, 0.3);
     height: 100%;
     width: 100%;
     z-index: 2;
@@ -81,28 +142,17 @@ main {
     height: 100%;
     width: 100%;
     position: absolute;
-    background:  url(../img/hero-imagen.JPG) no-repeat center center;
+    background: url(../img/hero-imagen.JPG) no-repeat center center;
     background-size: cover;
-}
-.cr-title {
-    background: url(../img/cruz-roja.png) no-repeat top center;
-    background-size: 50px;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    text-align: center;
 }
 .home-carousel {
     width: 100%;
 }
 
-.home-carousel .carousel-inner .carousel-item img
-{
+.home-carousel .carousel-inner .carousel-item img {
     height: 500px;
-object-fit: cover;
-
+    object-fit: cover;
 }
-
-
 
 .catalogo-cursos {
     display: grid;
@@ -176,12 +226,14 @@ object-fit: cover;
     max-width: 300px;
 }
 
-.cont-det-curso h1, .cont-det-novedad h1 {
+.cont-det-curso h1,
+.cont-det-novedad h1 {
     color: #d91e1c;
     margin-top: 2rem;
 }
 
-.curso-det-img,.novedad-det-img {
+.curso-det-img,
+.novedad-det-img {
     max-width: 50%;
     margin: auto;
 }

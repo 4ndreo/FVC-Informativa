@@ -17,9 +17,9 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
     <div class="hero d-flex">
         <div class="hero-text-cont d-flex flex-column container">
             <div class="hero-text w-50">
-                <h1 class="cr-title">Cruz Roja Argentina</h1>
+                <h1 class="cr-title mb-5">Cruz Roja Argentina</h1>
 
-                <p>Somos una asociación civil, humanitaria y de carácter voluntario, con presencia en el territorio
+                <p class="mb-5">Somos una asociación civil, humanitaria y de carácter voluntario, con presencia en el territorio
                     argentino, y parte integrante del Movimiento Internacional de la Cruz Roja y de la Media Luna Roja,
                     la
                     red
@@ -29,6 +29,7 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
                     país y
                     brindamos cobertura a los
                     asistentes en eventos masivos.</p>
+                    <a class="btn d-block m-auto">+ Conocé más</a>
             </div>
         </div>
         <div class="hero-image-cont w-50 ">
@@ -38,33 +39,6 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
 
     </div>
 
-    <div id="homeCarousel" class="home-carousel carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
 
     <h2 class="negrita">Nuestros valores</h2>
@@ -121,6 +95,35 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         </div>
 
 
+        <div id="homeCarousel" class="home-carousel carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
     </section>
 
