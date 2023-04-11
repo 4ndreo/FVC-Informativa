@@ -36,25 +36,42 @@ Este archivo funciona como nuestro template de base
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="{{url('/')}}">Inicio</a>
+                                <a class="nav-link" href="{{url('/')}}">Inicio</a>
                             </li>
+                            <li class="nav-item dropdown" id="myDropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                                <ul class="nav-item dropdown-menu">
+                                    <li class="sub-ddown-cont dropdown">
+                                        <a class="sub-ddown dropdown-item" href="#"> Cursos
+                                            &raquo; </a>
+                                        <ul class="closed-ddown submenu dropdown-menu">
+                                            <li><a class="dropdown-item"
+                                                    href="https://www.eventbrite.com.ar/o/cruz-roja-argentina-filial-villa-crespo-12660624312"
+                                                    target="_blank">Primeros Auxilios</a></li>
+                                            <li><a class="dropdown-item" href="{{url('cursos')}}">Charlas
+                                                    Comunitarias</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{url('cursos')}}">Empresas</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{url('cursos')}}">Coberturas
+                                            Sanitarias</a>
+                                    </li>
+                                </ul>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Cursos
-                                </a>
+                            <li class="nav-item dropdown" id="myDropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Voluntariado</a>
                                 <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" aria-current="page"
-                                            href="{{url('cursos')}}">Particulares</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" aria-current="page"
-                                            href="{{url('cursos')}}">In-company</a>
-                                    </li>
+                                    <li><a class="dropdown-item" href="#">Información</a></li>
+                                    <li><a class="dropdown-item" href="#">Participación/asociados</a></li>
+                                    <li><a class="dropdown-item" href="#">Sumarse al voluntariado</a></li>
+                                    <li><a class="dropdown-item" href="#">Proceso de incorporación</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -111,7 +128,8 @@ Este archivo funciona como nuestro template de base
             </div>
         </nav>
 
-       
+
+
 
         <main class="">
 
@@ -130,6 +148,52 @@ Este archivo funciona como nuestro template de base
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function(){
+// make it as accordion for smaller screens
+if (window.innerWidth < 992) {
+
+  // close all inner dropdowns when parent is closed
+  document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+    everydropdown.addEventListener('hidden.bs.dropdown', function () {
+      // after dropdown is hidden, then find all submenus
+        this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+          // hide every submenu as well
+          everysubmenu.style.display = 'none';
+        });
+    })
+});
+ 
+document.querySelectorAll('.sub-ddown').forEach(function(element){
+    element.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector('.show').className += ' show';
+        let nextEl = this.nextElementSibling;
+        if(nextEl && nextEl.classList.contains('submenu')) {
+            console.log('estoy en submenu')	;
+            // prevent opening link if link needs to open dropdown
+            e.preventDefault();
+            if(nextEl.classList.contains('closed-ddown')) {
+                console.log('estoy en closed')	;
+                nextEl.classList = 'open-ddown submenu';
+                // nextEl.style.display = 'block';
+                // nextEl.style.position = 'static';
+                // document.querySelectorAll()
+            }else if(nextEl.classList.contains('open-ddown')){
+                console.log('estoy en open')	;
+                nextEl.classList = 'closed-ddown submenu';
+                // nextEl.style.display = 'none';
+                // nextEl.style.position = 'static';
+            } 
+
+        }
+    });
+  })
+}
+// end if innerWidth
+}); 
+// DOMContentLoaded  end
+    </script> --}}
 </body>
 
 </html>
