@@ -19,7 +19,7 @@ Este archivo funciona como nuestro template de base
 </head>
 
 <body>
-    <div id="app" class="flex-wrapper">
+    {{-- <div id="app" class="flex-wrapper"> --}}
         <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-base">
             <div class="container navbar-ddown">
                 <a class="navbar-brand" href="{{url('/')}}">Cruz Roja</a>
@@ -75,9 +75,9 @@ Este archivo funciona como nuestro template de base
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('blog')}}">Blog</a>
+                                <a class="nav-link" href="{{url('blog')}}">Bibliografía</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="btn">
                                 <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
                             </li>
                             {{-- Si usuario autenticado --}}
@@ -131,7 +131,7 @@ Este archivo funciona como nuestro template de base
 
 
 
-        <main class="">
+        <main>
 
             @if (Session::has('status.message'))
             <div class="alert alert-{{Session::get('status.type') ?? 'info'}}">{!!Session::get('status.message')!!}
@@ -143,7 +143,7 @@ Este archivo funciona como nuestro template de base
         <footer class="footer">
             <p>Francisco Andreo y Roni Gueiser</p>
         </footer>
-    </div>
+    {{-- </div> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
