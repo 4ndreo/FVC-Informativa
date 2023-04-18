@@ -7,6 +7,7 @@ Este archivo funciona como nuestro template de base
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
 
 
@@ -42,7 +43,7 @@ Este archivo funciona como nuestro template de base
                                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
                                 <ul class="nav-item dropdown-menu">
                                     <li class="sub-ddown-cont dropdown">
-                                        <a class="sub-ddown dropdown-item" href="#"> Cursos
+                                        <a class="sub-ddown dropdown-item" href="#">Cursos
                                             &raquo; </a>
                                         <ul class="closed-ddown submenu dropdown-menu">
                                             <li><a class="dropdown-item"

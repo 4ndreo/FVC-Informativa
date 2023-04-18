@@ -8,8 +8,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 :root {
-    --main-red: rgba(237, 28, 46, 1);
-    --darker-red: rgb(204, 28, 43);
+    --main-red: #ed1c2e;
+    --darker-red: #cc1c2b;
+    --main-white: #F2F5EA;
+    --black: #2C363F;
   }
 
 html {
@@ -21,6 +23,8 @@ body,
 #app {
     height: 100%;
     font-family: "Lato", "Roboto", sans-serif;
+    background: var(--main-white);
+    color: var(--black);
 }
 
 .flex-wrapper {
@@ -30,7 +34,7 @@ body,
 }
 
 .negrita {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .btn {
@@ -99,7 +103,7 @@ h2 {
 }
 .nav-link {
     border: none;
-    color: black;
+    color: var(--black);
 }
 .nav-link:hover {
     color: #d91e1c;
@@ -230,20 +234,52 @@ section.trabajo h2 {
 section.trabajo ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    /* justify-items: start; */
+    gap: 3%;
+    padding:0;
+    margin-top: 3%;
+
 }
 
 section.trabajo ul li {
     width: 30%;
-    height: 50px;
+    min-width: 250px;
+    height: 250px;
+    list-style-type: none;
+    margin-bottom:3%;
+    box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.048),
+        0px 3.5px 5.3px rgba(0, 0, 0, 0.069),
+        0px 6.5px 10px rgba(0, 0, 0, 0.085),
+        0px 11.6px 17.9px rgba(0, 0, 0, 0.101),
+        0px 21.7px 33.4px rgba(0, 0, 0, 0.122) /* , */
+            /* 0px 52px 80px rgba(204, 28, 43, 0.17) */;
+    transition: background ease 0.3s, transform ease 0.3s, box-shadow ease 0.3s;
+}
+
+section.trabajo ul li:hover {
+    transform: scale(90%);
+    /* border: 0; */
+    box-shadow: none;
 }
 
 section.trabajo ul li a{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background: red;
+    background: white;
+    color: var(--black);
+    text-decoration: none;
 }
 
+@media (max-width: 991px) {
+    section.trabajo ul {
+        /* justify-content: space-evenly; */
+        text-align: center;
+    }
+}
 
 
 /* 
@@ -258,7 +294,7 @@ section.trabajo ul li a{
 }
 
 .home-carousel .carousel-inner .carousel-item img {
-    height: 500px;
+    height: 700px;
     object-fit: cover;
 }
 
