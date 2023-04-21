@@ -18,17 +18,12 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         <div class="hero-text w-50">
             <h1 class="cr-title mb-5">Cruz Roja Argentina</h1>
 
-            <p class="mb-5">Somos una asociación civil, humanitaria y de carácter voluntario, con presencia en el
-                territorio
-                argentino, y parte integrante del Movimiento Internacional de la Cruz Roja y de la Media Luna Roja,
-                la
-                red
-                humanitaria más grande del
-                mundo presente en 191 países. Capacitamos en Primeros Auxilios a más de 50.000 personas por año en
-                el
-                país y
-                brindamos cobertura a los
-                asistentes en eventos masivos.</p>
+            <p class="mb-5">Desde Filial Villa Crespo creemos en el fortalecimiento de las comunidades con las que
+                trabajamos, implementando medidas conjuntas y articulando con distintas organizaciones, con el fin de
+                aliviar el sufrimiento de todas las personas en situación de vulnerabilidad. Algunas de las actividades
+                que realizamos son las coberturas sanitarias de eventos masivos (recitales, eventos deportivos, etc), la
+                promoción de la salud y la diversidad en difusiones, talleres escolares y el dictado de cursos de
+                primeros auxilios.</p>
             <a class="btn d-block m-auto w-50">+ Conocé más</a>
         </div>
     </div>
@@ -63,13 +58,13 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/20221121173632_tecnicatura-superior-en-hemoterapia.jpg" class="d-block w-100" alt="...">
+                <img src="img/carrousel-1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/20221121173027_charlas-informativas.jpg" class="d-block w-100" alt="...">
+                <img src="img/carrousel-2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="img/20221017002140_tecnicatura-superior-en-enfermeria.jpg" class="d-block w-100" alt="...">
+                <img src="img/carrousel-3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
@@ -82,64 +77,34 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         </button>
     </div>
 </section>
-<div class="container">
-    <h2 class="negrita">Nuestros valores</h2>
-    <section class="cont-valores">
+<section class="coberturas container">
+    <h2 class="negrita">Coberturas Sanitarias</h2>
 
+    <div class="cont-info-coberturas">
+        <video autoplay muted>
+            <source src="img/Resumen2022_Asamblea.mp4">
+        </video>
+        <div class="cont-texto">
+            <p>Nuestro compromiso con la salud y el bienestar de la comunidad nos lleva a ofrecer servicios de
+                Coberturas Sanitarias para eventos y producciones.</p>
 
-        <div class="item-valores">
-            <h3>Acciones Humanitarias</h3>
+            <p>Sabemos que en la actualidad la salud es una preocupación prioritaria en cualquier actividad que
+                involucre a un grupo de personas. Por ello, nuestra filial cuenta con un equipo de profesionales
+                altamente capacitados en la implementación de medidas de prevención y cuidado de la salud en todo tipo
+                de eventos y producciones.</p>
 
-            <p>
-                Desarrollamos acciones humanitarias junto a las comunidades, promoviendo la reducción de riesgos y el
-                desarrollo integral de las personas,
-                construyendo y fortaleciendo las capacidades locales, fomentando la inclusión y participación de todos
-                los
-                grupos sin ninguna distinción o discriminación.
-            </p>
+            <p>Ofrecemos una amplia gama de servicios de Coberturas Sanitarias adaptados a las necesidades de cada
+                evento, desde pequeñas reuniones hasta grandes producciones. Nuestros servicios incluyen la realización
+                de controles de temperatura, aplicación de protocolos sanitarios, suministro de elementos de protección
+                personal y la coordinación de acciones ante situaciones de emergencia.</p>
+
+            <p>Si estás organizando un evento o producción y buscás garantizar la seguridad y salud de tus asistentes,
+                no dudes en contactarnos. En Cruz Roja filial Villa Crespo, nos encargamos de cuidar de vos y de tu
+                evento.</p>
+            <a class="btn d-block  w-25">+ Conocé más</a>
         </div>
-
-        <div class="item-valores">
-            <h3>Siempre Presentes</h3>
-
-            <p>Desde Cruz Roja estamos presentes en cada gran emergencia, cuando ocurre el desastre y después, cuando
-                los
-                hechos dejan de ser noticia.</p>
-        </div>
-
-        <div class="item-valores">
-            <h3>Programas y Servicios</h3>
-            <p>A través de nuestros distintos programas y servicios educativos, deseamos construir una sociedad más
-                justa y
-                más incluyente con los sectores en
-                situación de vulnerabilidad, para que tengan acceso a fuentes de bienestar, seguridad e igualdad de
-                oportunidades.</p>
-        </div>
-
-
-        <div class="item-valores">
-            <h3>Cruz Roja siempre está</h3>
-            <p>
-                En todo momento, a través de nuestras 66 filiales, acompañamos al crecimiento de las comunidades
-                fortaleciendo la resiliencia y promoviendo
-                la planificación para estar mejor preparados ante emergencias y desastres.
-            </p>
-        </div>
-
-        <div class="item-valores">
-            <h3>Trabajando juntos</h3>
-            <p>
-                Trabajamos en la promoción de la salud y el desarrollo comunitario, reforzando la prevención de
-                enfermedades
-                prevalentes, y la reducción de
-                la vulnerabilidad del VIH desde un enfoque de promoción de derechos, de género y de diversidad.
-            </p>
-        </div>
-
-
-
-    </section>
-</div>
+    </div>
+</section>
 
 <section class="cont-cursos-home d-flex flex-column">
     <h2>Cursos</h2>
