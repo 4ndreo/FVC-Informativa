@@ -81,7 +81,7 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
     <h2 class="negrita">Coberturas Sanitarias</h2>
 
     <div class="cont-info-coberturas">
-        <video autoplay muted>
+        <video autoplay muted loop>
             <source src="img/Resumen2022_Asamblea.mp4">
         </video>
         <div class="cont-texto">
@@ -105,19 +105,29 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
         </div>
     </div>
 </section>
-
-<section class="cont-cursos-home d-flex flex-column">
-    <h2>Cursos</h2>
-
-    <p>Desde Cruz Roja nos enfocamos en agrandar nuestra comunidad y tener más gente con conocimiento en las calles,
-        para que ante cualquier problema haya gente que pueda ayudar a los demás con la capacitación necesaria para
-        responder.
-    </p>
-    <p>Tenemos distintos cursos en los que te podés inscribir y así ser parte de un movimiento que prioriza la salud
-        y bienestar de los demás
-    </p>
-
-
-    <a href="{{url('cursos')}}" class="btn btn-ver-cursos">Ver cursos</a>
+<section class="contacto container">
+    <div class="cont-contacto-lista">
+        <div class="d-flex flex-column justify-content-between">
+            <div class="">
+                <h2 class="negrita">Contacto</h2>
+                <p class="negrita">Horarios: Lunes a Viernes de 13:30hs a 18hs</p>
+            </div>
+            <ul class="contacto-lista">
+                <li class="contacto-item negrita whatsapp">Whatsapp: <a href="https://walink.co/2062c6">11 3573-3949</a>
+                </li>
+                <li class="contacto-item negrita email">Email: <a
+                        href="mailto:v-crespo@cruzroja.org.ar">v-crespo@cruzroja.org.ar</a></li>
+                <li class="contacto-item negrita telefono">Teléfono: <a href="tel:45543820">4554-3820</a></li>
+                <li class="contacto-item negrita direccion">Dirección: <a
+                        href="https://goo.gl/maps/XYHRK7t6zgTWJxKU8">Av. Córdoba 6434</a></li>
+                <li class="contacto-item negrita prensa">Prensa: <a href="#">A DEFINIR</a></li>
+            </ul>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.8628167382426!2d-58.45284542343148!3d-34.58233755637096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5ef4a9eab37%3A0x6c44823c4be0917f!2sAv.%20C%C3%B3rdoba%206434%2C%20C1427BZR%20CABA!5e0!3m2!1ses!2sar!4v1682135449099!5m2!1ses!2sar"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 </section>
+
 @endsection
