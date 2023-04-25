@@ -17,6 +17,7 @@ Este archivo funciona como nuestro template de base
         integrity="sha512-j+8sk90CyNqD7zkw9+AwhRuZdEJRLFBUg10GkELVu+EJqpBv4u60cshAYNOidHRgyaKNKhz+7xgwodircCS01g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        @vite('resources/js/app.js')
 </head>
 
 <body>
