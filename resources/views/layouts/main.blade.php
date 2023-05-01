@@ -17,7 +17,7 @@ Este archivo funciona como nuestro template de base
         integrity="sha512-j+8sk90CyNqD7zkw9+AwhRuZdEJRLFBUg10GkELVu+EJqpBv4u60cshAYNOidHRgyaKNKhz+7xgwodircCS01g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        @vite('resources/js/app.js')
+    @vite('resources/js/app.js')
 </head>
 
 <body>
@@ -143,59 +143,54 @@ Este archivo funciona como nuestro template de base
         </main>
 
         <footer class="footer">
-            <p>Francisco Andreo y Roni Gueiser</p>
+            <div class="container">
+                <ul>
+                    <li><a href="{{url('/')}}" class="negrita">Inicio</a></li>
+                    <li><a href="/#actividades">Actividades</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="negrita">Institucional</a></li>
+                    <li><a href="/#actividades">Filial Villa Crespo</a></li>
+                    <li><a href="/#actividades">Cruz Roja Argentina</a></li>
+                    <li><a href="/#actividades">Principios</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="negrita">Voluntariado</a></li>
+                    <li><a href="/#actividades">Qué hacemos</a></li>
+                    <li><a href="/#actividades">Sumate</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="negrita">Servicios</a></li>
+                    <li><a href="/#actividades">Cursos</a></li>
+                    <li><a href="/#actividades">Empresas</a></li>
+                    <li><a href="/#actividades">Coberturas Sanitarias</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#contacto" class="negrita">Contacto</a></li>
+                    <li><a href="#contacto">Whatsapp</a></li>
+                    <li><a href="#contacto">Email</a></li>
+                    <li><a href="#contacto">Teléfono</a></li>
+                    <li><a href="#contacto">Ubicación</a></li>
+                    <li><a href="#contacto">Horarios</a></li>
+                    <li><a href="#contacto">Prensa</a></li>
+                </ul>
+            </div>
+            <div class="redes container">
+                <p>Copyrights © 2023 Todos los derechos reservados Cruz Roja - Filial Villa Crespo.</p>
+                <ul class="d-flex direction-row gap-4">
+                    <li>Whatsapp</li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
         </footer>
-    {{-- </div> --}}
+        {{--
+    </div> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
     </script>
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function(){
-// make it as accordion for smaller screens
-if (window.innerWidth < 992) {
 
-  // close all inner dropdowns when parent is closed
-  document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-    everydropdown.addEventListener('hidden.bs.dropdown', function () {
-      // after dropdown is hidden, then find all submenus
-        this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-          // hide every submenu as well
-          everysubmenu.style.display = 'none';
-        });
-    })
-});
- 
-document.querySelectorAll('.sub-ddown').forEach(function(element){
-    element.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector('.show').className += ' show';
-        let nextEl = this.nextElementSibling;
-        if(nextEl && nextEl.classList.contains('submenu')) {
-            console.log('estoy en submenu')	;
-            // prevent opening link if link needs to open dropdown
-            e.preventDefault();
-            if(nextEl.classList.contains('closed-ddown')) {
-                console.log('estoy en closed')	;
-                nextEl.classList = 'open-ddown submenu';
-                // nextEl.style.display = 'block';
-                // nextEl.style.position = 'static';
-                // document.querySelectorAll()
-            }else if(nextEl.classList.contains('open-ddown')){
-                console.log('estoy en open')	;
-                nextEl.classList = 'closed-ddown submenu';
-                // nextEl.style.display = 'none';
-                // nextEl.style.position = 'static';
-            } 
-
-        }
-    });
-  })
-}
-// end if innerWidth
-}); 
-// DOMContentLoaded  end
-    </script> --}}
 </body>
 
 </html>

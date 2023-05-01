@@ -35,7 +35,7 @@ Debemos aclarar en que espacio "cedido" por el template queremos ubicar el conte
 </section>
 
 
-<section class="trabajo container">
+<section class="trabajo container" id="actividades">
     <h2 class="negrita">Nuestro trabajo</h2>
     <ul>
         <li><a href="#"><span>Cursos</span></a></li>

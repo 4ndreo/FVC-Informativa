@@ -10,9 +10,9 @@
 :root {
     --main-red: #ed1c2e;
     --darker-red: #cc1c2b;
-    --main-white: #F2F5EA;
-    --black: #2C363F;
-  }
+    --main-white: #f2f5ea;
+    --black: #2c363f;
+}
 
 html {
     scroll-behavior: smooth;
@@ -237,9 +237,8 @@ section.trabajo ul {
     justify-content: center;
     /* justify-items: start; */
     gap: 3%;
-    padding:0;
+    padding: 0;
     margin-top: 3%;
-
 }
 
 section.trabajo ul li {
@@ -247,7 +246,7 @@ section.trabajo ul li {
     min-width: 250px;
     height: 250px;
     list-style-type: none;
-    margin-bottom:3%;
+    margin-bottom: 3%;
     box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.048),
         0px 3.5px 5.3px rgba(0, 0, 0, 0.069),
         0px 6.5px 10px rgba(0, 0, 0, 0.085),
@@ -263,7 +262,7 @@ section.trabajo ul li:hover {
     box-shadow: none;
 }
 
-section.trabajo ul li a{
+section.trabajo ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,13 +280,11 @@ section.trabajo ul li a{
     }
 }
 
-
 /* 
 |-------------------------------------------
 |   Carrousel
 |-------------------------------------------
 */
-
 
 .home-carousel {
     width: 100%;
@@ -304,7 +301,7 @@ section.trabajo ul li a{
 |-------------------------------------------
 */
 
-section.coberturas  {
+section.coberturas {
     position: relative;
 }
 section.coberturas h2 {
@@ -325,14 +322,14 @@ section.coberturas video {
 section.coberturas .cont-texto {
     position: absolute;
     width: 60%;
-    background: rgba(255,255,255, 1);
+    background: rgba(255, 255, 255, 1);
     right: 0;
     padding: 2rem;
     box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.048),
         0px 3.5px 5.3px rgba(0, 0, 0, 0.069),
         0px 6.5px 10px rgba(0, 0, 0, 0.085),
         0px 11.6px 17.9px rgba(0, 0, 0, 0.101),
-        0px 21.7px 33.4px rgba(0, 0, 0, 0.122) 
+        0px 21.7px 33.4px rgba(0, 0, 0, 0.122);
 }
 /* 
 @media (max-width: 991px) {
@@ -342,14 +339,13 @@ section.coberturas .cont-texto {
     }
 } */
 
-
 /* 
 |-------------------------------------------
 |   Contacto
 |-------------------------------------------
 */
 
-section.contacto h2~p {
+section.contacto h2 ~ p {
     margin-bottom: 3%;
     font-size: 1.15rem;
 }
@@ -363,13 +359,13 @@ section.contacto ul {
     justify-content: space-between;
     align-items: stretch;
 }
-.cont-contacto-lista iframe{
+.cont-contacto-lista iframe {
     width: 60%;
     box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.048),
         0px 3.5px 5.3px rgba(0, 0, 0, 0.069),
         0px 6.5px 10px rgba(0, 0, 0, 0.085),
         0px 11.6px 17.9px rgba(0, 0, 0, 0.101),
-        0px 21.7px 33.4px rgba(0, 0, 0, 0.122)
+        0px 21.7px 33.4px rgba(0, 0, 0, 0.122);
 }
 section.contacto .contacto-item {
     padding: 0.25rem 0 0.25rem 3rem;
@@ -378,40 +374,77 @@ section.contacto .contacto-item {
 }
 section.contacto .contacto-item:not(:last-child) {
     margin-bottom: 1.5rem;
-
 }
 section.contacto .contacto-item a {
     color: var(--black);
     text-decoration: none;
 }
 section.contacto .whatsapp {
-    background: url('../img/icons/whatsapp.svg') no-repeat left center;
+    background: url("../img/icons/whatsapp.svg") no-repeat left center;
     background-size: contain;
 }
 section.contacto .email {
-    background: url('../img/icons/email.svg') no-repeat left center;
+    background: url("../img/icons/email.svg") no-repeat left center;
     background-size: contain;
 }
 section.contacto .telefono {
-    background: url('../img/icons/phone-v2.svg') no-repeat left center;
+    background: url("../img/icons/phone-v2.svg") no-repeat left center;
     background-size: contain;
 }
 section.contacto .direccion {
-    background: url('../img/icons/location.svg') no-repeat left center;
+    background: url("../img/icons/location.svg") no-repeat left center;
     background-size: contain;
 }
 section.contacto .prensa {
-    background: url('../img/icons/microphone.svg') no-repeat left center;
+    background: url("../img/icons/microphone.svg") no-repeat left center;
     background-size: contain;
 }
 
+/* 
+|-------------------------------------------
+|   Footer
+|-------------------------------------------
+*/
+
+.footer {
+    background-color: var(--main-red);
+    color: #fff;
+}
+
+.footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 3rem 0;
+}
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+.footer li {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+}
+
+.footer li,
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+.footer .redes {
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* 
 |-------------------------------------------
 |   __OLD__
 |-------------------------------------------
 */
-
 
 .catalogo-cursos {
     display: grid;
@@ -441,7 +474,6 @@ section.contacto .prensa {
     height: 200px;
     background-color: white;
 }
-
 
 .img-edit {
     max-width: 300px;
@@ -501,14 +533,6 @@ section.contacto .prensa {
     border: 1px solid #991614;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75px;
-    background-color: #333;
-    color: #fff;
-}
 .footer p {
     margin-bottom: 0;
 }
