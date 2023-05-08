@@ -12,12 +12,15 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])->name('ho
 
 Route::get('nosotros', [\App\Http\Controllers\NosotrosController::class, 'index'])->name('nosotros');
 
+Route::get('ingresantes', [\App\Http\Controllers\IngresantesController::class, 'index'])
+    ->name('ingresantes');
+
 Route::get('blog', [\App\Http\Controllers\NovedadesController::class, 'index'])
     ->name('novedades');
 
 Route::get('cursos', [\App\Http\Controllers\CursosController::class, 'cursos'])
-    ->name('ver-cursos')
-    ->middleware('taller-completo');
+    ->name('ver-cursos');
+// ->middleware('taller-completo');
 
 Route::get('contacto', [\App\Http\Controllers\ContactoController::class, 'index'])->name('contacto');
 
@@ -138,4 +141,3 @@ Route::get('cursos/confirmar-taller-completo', [\App\Http\Controllers\ConfirmarT
 Route::post('cursos/confirmar-taller-completo', [\App\Http\Controllers\ConfirmarTallerCompletoController::class, 'confirmarEjecutar'])
 
     ->name('confirmar-taller-completo.ejecutar');
-

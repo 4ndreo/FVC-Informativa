@@ -72,7 +72,7 @@ Este archivo funciona como nuestro template de base
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Información</a></li>
                                     <li><a class="dropdown-item" href="#">Participación/asociados</a></li>
-                                    <li><a class="dropdown-item" href="#">Sumarse al voluntariado</a></li>
+                                    <li><a class="dropdown-item" href="{{url('ingresantes')}}">Sumarse al voluntariado</a></li>
                                     <li><a class="dropdown-item" href="#">Proceso de incorporación</a></li>
                                 </ul>
                             </li>
@@ -115,13 +115,13 @@ Este archivo funciona como nuestro template de base
                                     <button type="submit" class="btn nav-link">Cerrar Sesion</button>
                                 </form>
                             </li>
-                            @else
+                            {{-- @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesion</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('registrar.usuario') }}">Registrarse</a>
-                            </li>
+                            </li> --}}
                             @endif
                             {{-- Fin usuario autenticado --}}
                         </ul>
@@ -181,6 +181,11 @@ Este archivo funciona como nuestro template de base
                     <li>Whatsapp</li>
                     <li>Facebook</li>
                     <li>Instagram</li>
+                    @if(!Auth::user())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesion</a>
+                    </li>
+                    @endif
                 </ul>
             </div>
         </footer>

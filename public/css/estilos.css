@@ -81,6 +81,11 @@ h2 {
     font-size: 3rem;
 }
 
+.place-center {
+    display: grid;
+    place-content: center;
+}
+
 /* 
 |-------------------------------------------
 |   Header
@@ -88,11 +93,11 @@ h2 {
 */
 
 .navbar-base {
-    background-color: white;
+    background-color: var(--main-white);
     height: 70px;
 }
 .navbar-ddown {
-    background: white;
+    background: var(--main-white);
 }
 .navbar-brand {
     color: #d91e1c;
@@ -408,7 +413,7 @@ section.contacto .prensa {
 
 .footer {
     background-color: var(--main-red);
-    color: #fff;
+    color: var(--main-white);
 }
 
 .footer div {
@@ -428,17 +433,68 @@ section.contacto .prensa {
 
 .footer li,
 a {
-    color: #fff;
+    color: var(--main-white);
     text-decoration: none;
 }
 .footer a:hover {
     text-decoration: underline;
-    color: #fff;
+    color: var(--main-white);
 }
 .footer .redes {
     justify-content: space-between;
     align-items: center;
 }
+
+/* 
+|-------------------------------------------
+|   Ingresantes
+|-------------------------------------------
+*/
+
+.ingresantes-proceso-lista {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.ingresantes-proceso-lista li {
+    background-color: #fff;
+    width: 25%;
+    padding: 1rem;
+    list-style-type: none;
+    position: relative;
+    box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.048),
+        0px 3.5px 5.3px rgba(0, 0, 0, 0.069),
+        0px 6.5px 10px rgba(0, 0, 0, 0.085),
+        0px 11.6px 17.9px rgba(0, 0, 0, 0.101),
+        0px 21.7px 33.4px rgba(0, 0, 0, 0.122) /* , */
+            /* 0px 52px 80px rgba(204, 28, 43, 0.17) */;
+    transition: background ease 0.3s, transform ease 0.3s, box-shadow ease 0.3s;
+}
+.ingresantes-proceso-lista li:hover {
+    transform: scale(90%);
+    /* border: 0; */
+    box-shadow: none;
+}
+
+.ingresantes-proceso-lista li:hover .proceso-item-title {
+    opacity: 0;
+}
+.ingresantes-proceso-lista li .proceso-item-title {
+    transition: all ease-out 0.3s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 1rem;
+    background: #fff;
+}
+.ingresantes-proceso-lista li .proceso-item-title h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+
 
 /* 
 |-------------------------------------------
